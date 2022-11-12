@@ -99,4 +99,10 @@ $breakpoints: (
     line-height: 18px;
     opacity: 0.5;
   }
+
+  &:hover {
+    &::placeholder {
+      opacity: 1;
+    }
+  }
 }
