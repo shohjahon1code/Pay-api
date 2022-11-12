@@ -1,0 +1,67 @@
+.simple {
+  margin-bottom: 146px;
+  background-image: url("../../assets/images/hero-circle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: calc(50% + 599px) calc(50% - 1px);
+
+  @include media(992) {
+    margin-bottom: 100px;
+    background: none;
+  }
+
+  @include media(576) {
+    margin-bottom: 80px;
+  }
+
+  &__wrapper {
+    @extend %d-flex;
+
+    @include media(992) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    @extend %title;
+
+    @include media(992) {
+      text-align: center;
+    }
+
+    @include media(576) {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    max-width: 445px;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #6c8294;
+    line-height: 28px;
+
+    @include media(992) {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @include media(576) {
+      font-size: 15px;
+      line-height: 28px;
+    }
+  }
+
+  &__right {
+    display: flex;
+  }
+
+  &__img {
+    @include media(992) {
+      width: 100%;
+    }
+  }
+}

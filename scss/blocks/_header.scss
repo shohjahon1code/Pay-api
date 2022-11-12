@@ -1,0 +1,112 @@
+.div-bg {
+  background-image: url("../../assets/images/hero-circle.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 461px) calc(50% - 210px);
+  background-size: contain;
+
+  @include media(992) {
+    background-image: url("../../assets/images/hero-bg-responsevi.png");
+    background-position: calc(50% + 1px) calc(50% - 487px);
+    background-size: cover;
+  }
+}
+
+.header {
+  padding-top: 40px;
+  margin-bottom: 82px;
+  @extend %d-flex;
+
+  &--active {
+    transform: translate(0) !important;
+  }
+
+  &__logo {
+    margin-right: 64px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(768) {
+      position: fixed;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      z-index: 10;
+
+      background-color: $main-background-color;
+      transform: translate(100%);
+      transition: all 0.5s linear;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    @extend %d-flex;
+    gap: 40px;
+
+    @include media(768) {
+      flex-direction: column;
+      gap: 50px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 15px;
+    color: $main-title-color;
+
+    line-height: 18px;
+    opacity: 0.7;
+    transition: all 0.2s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      color: $button-color;
+    }
+
+    @include media(768) {
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      color: #fbfcfe;
+
+      line-height: 24px;
+    }
+  }
+
+  &__button {
+    @extend %button;
+
+    @include media(768) {
+      margin-top: 40px;
+    }
+  }
+
+  &__open {
+    display: none;
+
+    @include media(768) {
+      display: block;
+    }
+  }
+
+  &__close {
+    display: none;
+  }
+}

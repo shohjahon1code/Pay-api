@@ -1,0 +1,98 @@
+.hero {
+  @extend %d-flex;
+  margin-bottom: 67px;
+
+  @include media(992) {
+    flex-direction: column-reverse;
+    margin-bottom: 100px;
+  }
+  @include media(576) {
+    margin-bottom: 80px;
+  }
+
+  &__left {
+    @include media(992) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__form {
+    @include media(576) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    max-width: 546px;
+    width: 100%;
+    margin-bottom: 21px;
+
+    font-family: $DM-serif;
+    font-weight: 400;
+    font-size: 72px;
+    color: $main-title-color;
+
+    line-height: 72px;
+    letter-spacing: -0.553846px;
+
+    @include media(992) {
+      max-width: 573px;
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    @include media(576) {
+      margin-bottom: 24px;
+      max-width: 327px;
+      font-size: 32px;
+      text-align: center;
+      line-height: 36px;
+    }
+  }
+
+  &__inputs {
+    margin-bottom: 16px;
+  }
+
+  &__input {
+    @extend %input;
+
+    @include media(576) {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__btn {
+    @extend %button;
+    margin-left: -50px;
+
+    @include media(576) {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    margin-left: 27px;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #6c8294;
+    line-height: 18px;
+
+    span {
+      font-weight: 700;
+    }
+
+    @include media(992) {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+}

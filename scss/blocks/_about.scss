@@ -1,0 +1,122 @@
+.about {
+  position: relative;
+  min-height: 472px;
+  margin-bottom: 150px;
+
+  background: $main-background-color;
+
+  &__wrapper {
+    min-height: 472px;
+    @extend %d-flex;
+
+    @include media(992) {
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      min-height: 615px;
+      margin-bottom: 100px;
+    }
+
+    @include media(768) {
+      min-height: 670px;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__left {
+    @include media(992) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: $DM-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #fbfcfe;
+
+    line-height: 56px;
+    letter-spacing: -0.369231px;
+
+    @include media(768) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    max-width: 445px;
+    min-height: 112px;
+
+    font-weight: 400;
+    font-size: 15px;
+    color: #fbfcfe;
+
+    line-height: 28px;
+    opacity: 0.7;
+
+    @include media(992) {
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    padding: 16px 32px;
+
+    border: 1px solid #fbfcfe;
+    border-radius: 24px;
+
+    font-weight: 700;
+    font-size: 15px;
+    color: #fbfcfe;
+
+    line-height: 18px;
+    letter-spacing: -0.115385px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background-color: #fbfcfe;
+      color: black;
+    }
+
+    &:active {
+      background-color: $button-color;
+    }
+  }
+
+  &__right {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    grid-gap: 60px;
+
+    @include media(992) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(576) {
+      grid-gap: 25px;
+    }
+  }
+
+  &__position {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include media(992) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

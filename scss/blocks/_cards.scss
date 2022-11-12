@@ -1,0 +1,64 @@
+.cards {
+  @extend %d-flex;
+  margin-bottom: 96px;
+
+  @include media(992) {
+    gap: 10px;
+  }
+
+  @include media(768) {
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include media(992) {
+      max-width: 223px;
+      min-height: 311px;
+      justify-content: start;
+    }
+
+    @include media(768) {
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 18px;
+
+    color: $main-title-color;
+
+    text-align: center;
+    letter-spacing: -0.138462px;
+    line-height: 25px;
+  }
+
+  &__text {
+    max-width: 350px;
+    font-weight: 400;
+    font-size: 15px;
+
+    text-align: center;
+    color: $main-text-color;
+
+    letter-spacing: -0.115385px;
+    line-height: 25px;
+
+    @include media(768) {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.implement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 176px;
+
+  @include media(992) {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+
+  @include media(576) {
+    margin-bottom: 50px;
+  }
+
+  &__left {
+    max-width: 445px;
+    width: 100%;
+    min-height: 284px;
+
+    background: #1b262f;
+    box-shadow: 25px 25px 80px rgba(54, 83, 107, 0.300727);
+    border-radius: 8px;
+
+    @include media(992) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-left: 16px;
+
+    min-height: 40px;
+    background: #2e3f4d;
+    border-radius: 8px 8px 0px 0px;
+
+    &-color {
+      width: 16px;
+      height: 16px;
+      background: #ba4270;
+      border-radius: 50%;
+    }
+
+    &-color:nth-child(2) {
+      background: #527695;
+    }
+    &-color:nth-child(3) {
+      background: #36536b;
+    }
+  }
+
+  &__bottom {
+    padding: 32px;
+    font-family: $RobotoMono;
+    font-weight: 400;
+    font-size: 13px;
+
+    color: #fbfcfe;
+    line-height: 20px;
+
+    @include media(576) {
+      padding: 17px 20px;
+      font-size: 9px;
+      line-height: 16px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @extend %title;
+
+    @include media(992) {
+      text-align: center;
+    }
+
+    @include media(576) {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    max-width: 445px;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #6c8294;
+    line-height: 28px;
+
+    @include media(992) {
+      max-width: 573px;
+      text-align: center;
+    }
+
+    @include media(576) {
+      width: 100%;
+    }
+  }
+}

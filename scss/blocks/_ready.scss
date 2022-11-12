@@ -1,0 +1,42 @@
+.ready {
+  margin-bottom: 96px;
+  @extend %d-flex;
+
+  @include media(992) {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @include media(576) {
+    margin-bottom: 80px;
+    gap: 32px;
+  }
+
+  &__title {
+    @extend %title;
+
+    @include media(576) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  }
+
+  &__input {
+    @extend %input;
+
+    @include media(576) {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__button {
+    @extend %button;
+    margin-left: -50px;
+
+    @include media(576) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

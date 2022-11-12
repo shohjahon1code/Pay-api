@@ -1,0 +1,15 @@
+@import "./config/variables";
+@import "./config/normalize";
+@import "./config/root";
+@import "./config/fonts";
+@import "./config/global";
+
+//blocks
+@import "./blocks/header";
+@import "./blocks/hero";
+@import "./blocks/about";
+@import "./blocks/implement";
+@import "./blocks/simple";
+@import "./blocks/cards";
+@import "./blocks/ready";
+@import "./blocks/footer";
